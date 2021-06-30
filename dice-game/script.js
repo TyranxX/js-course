@@ -45,7 +45,7 @@ const rollFunc = function () {
     let diceRoll = Math.trunc(Math.random() * 6) + 1;
     dice.classList.remove('hidden');
     console.log(diceRoll);
-    dice.src = `dice-${diceRoll}.png`;
+    dice.src = `images/dice-${diceRoll}.png`;
     if (diceRoll !== 1) {
       currentScore += diceRoll;
       document.getElementById(`current--${activePlayer}`).textContent =
