@@ -22,6 +22,8 @@ const init = function () {
   document.getElementById('score--1').textContent = 0;
   document.getElementById('current--0').textContent = 0;
   document.getElementById('current--1').textContent = 0;
+  document.getElementById('name--0').textContent = 'Player 1';
+  document.getElementById('name--1').textContent = 'Player 2';
   player0.classList.remove('player--winner');
   player1.classList.remove('player--winner');
   player0.classList.add('player--active');
@@ -62,12 +64,9 @@ btnHold.addEventListener('click', function () {
 
     if (scores[activePlayer] >= 20) {
       playing = false;
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.add('player--winner');
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.remove('player--active');
+      document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+      document.getElementById(`name--${activePlayer}`).textContent = 'WINNER 🐱‍🏍';
+      document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
       dice.classList.add('hidden');
     }
     switchPlayer();
