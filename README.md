@@ -1,1 +1,1 @@
-# js-course
+# js-games
